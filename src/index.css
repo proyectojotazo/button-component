@@ -1,13 +1,287 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* FONTS */
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Ubuntu;
+  src: url(./assets/fonts/UbuntuMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url(./assets/fonts/NotoSansJP-Regular.otf);
+}
+
+/* VARIABLES */
+
+:root {
+  /*Fonts*/
+  --title-font: Poppins;
+  --text-font: Ubuntu;
+  --button-font: NotoSans;
+  /*Button text colors*/
+  --black-text: rgba(63, 63, 63, 1);
+  --blue-text: rgba(61, 90, 254, 1);
+  --grey-text: rgba(158, 158, 158, 1);
+  /*Button bg colors*/
+  --light-blue: rgba(41, 98, 255, 0.1);
+  --default-bg: #e0e0e0;
+  --default-bg-hover: #aeaeae;
+  --primary-bg: #2962ff;
+  --primary-bg-hover: #0039cb;
+  --secondary-bg: #455a64;
+  --secondary-bg-hover: #1c313a;
+  --danger-bg: #d32f2f;
+  --danger-bg-hover: #9a0007;
+}
+
+/* MAIN CONTENT */
+
+.web-content {
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+}
+
+/* ASIDE */
+.orange {
+  color: #f7542e;
+}
+
+.lateral {
+  background-color: #fafbfd;
+  display: flex;
+  flex-direction: column;
+  width: 14.8125rem;
+  
+}
+
+.lateral__title {
+  font-family: var(--title-font);
+  font-size: 0.8125rem;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.wrapper-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-options__item {
+  font-size: 0.875rem;
+  color: var(--grey-text);
+  font-family: var(--button-font);
+  margin-left: 3rem;
+}
+
+.bolder {
+  font-weight: bold;
+  color: rgba(9, 15, 49, 1);
+}
+
+/* MAIN SECTION CONTENT */
+
+.main-section-content {
+  width: 80%;
+  padding-left: 4rem;
+}
+
+/* HEADER */
+
+.header {
+  margin-top: 3rem;
+}
+
+.header__title {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+}
+
+/* BUTTONS CONTENT */
+
+.row {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  width: 18.75rem;
+  height: 6.25rem;
+}
+
+.card__text {
+  font-size: 0.75rem;
+  font-family: var(--text-font);
+}
+
+.gray {
+  color: rgba(130, 130, 130, 1);
+}
+
+.card__btn {
+  height: 2.25rem;
+  font-family: var(--button-font);
+  font-size: 0.875rem;
+  transition: all 200ms;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+.sm {
+  min-width: 4.5625rem;
+  min-height: 2rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.md {
+  min-width: 5.0625rem;
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.lg {
+  min-width: 5.8125rem;
+  min-height: 2.625rem;
+  padding: 0.6875rem 1.375rem;
+}
+
+.color-default {
+  color: var(--black-text);
+  background-color: var(--default-bg);
+  box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
+}
+
+.color-default:hover,
+.color-default:focus {
+  background-color: var(--default-bg-hover);
+}
+
+.color-primary {
+  color: #fff;
+  background-color: var(--primary-bg);
+  box-shadow: 0px 2px 3px 0px rgba(41, 98, 255, 0.2);
+}
+
+.color-primary:hover,
+.color-primary:focus {
+  background-color: var(--primary-bg-hover);
+}
+
+.color-secondary {
+  color: #fff;
+  background-color: var(--secondary-bg);
+  box-shadow: 0px 2px 3px 0px rgba(69, 90, 100, 0.2);
+}
+
+.color-secondary:hover,
+.color-secondary:focus {
+  background-color: var(--secondary-bg-hover);
+}
+
+.color-danger {
+  background-color: var(--danger-bg);
+  color: #fff;
+  box-shadow: 0px 2px 3px 0px rgba(211, 47, 47, 0.2);
+}
+
+.color-danger:hover,
+.color-danger:focus {
+  background-color: var(--danger-bg-hover);
+}
+
+.outline {
+  background-color: #fff;
+  color: var(--blue-text);
+  border: 1px solid var(--blue-text);
+  box-shadow: none;
+}
+
+.outline:hover,
+.outline:focus {
+  background-color: var(--light-blue);
+}
+
+.text {
+  color: var(--blue-text);
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.text:hover,
+.text:focus {
+  background-color: var(--light-blue);
+}
+
+.text.hover-focus:hover,
+.text.hover-focus:focus {
+  background-color: var(--light-blue);
+}
+
+.disable-shadow {
+  box-shadow: none;
+}
+
+.disabled {
+  color: var(--grey-text);
+  background-color: var(--default-bg);
+}
+
+.disabled.text {
+  background-color: #fff;
+}
+
+/* FIXED CLASSES (ONLY FOR SHOW) */
+
+.hidden-text {
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fixed-default {
+  color: var(--black-text);
+  background-color: var(--default-bg-hover);
+  box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
+}
+
+.fixed-primary {
+  color: #fff;
+  background-color: var(--primary-bg-hover);
+  box-shadow: 0px 2px 3px 0px rgba(41, 98, 255, 0.2);
+}
+
+.fixed-secondary {
+  color: #fff;
+  background-color: var(--secondary-bg-hover);
+  box-shadow: 0px 2px 3px 0px rgba(69, 90, 100, 0.2);
+}
+
+.fixed-danger {
+  background-color: var(--danger-bg-hover);
+  color: #fff;
+  box-shadow: 0px 2px 3px 0px rgba(211, 47, 47, 0.2);
+}
+
+.fixed-outline {
+  background-color: var(--light-blue);
+  color: var(--blue-text);
+  border: 1px solid var(--blue-text);
+}
+
+.fixed-text {
+  color: var(--blue-text);
+  background-color: var(--light-blue);
+  box-shadow: none;
 }
