@@ -13,6 +13,7 @@ const Button = ({
   const style = `${size} card__btn color-${color} ${variant} ${
     disableShadow ? "disable-shadow" : ""
   } ${disabled ? "disabled" : ""}`;
+
   return (
     <button className={style}>
       {startIcon} {text} {endIcon}
