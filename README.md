@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://devrpw.web.app/">
+    <a href="https://styled-component123.netlify.app/">
       Solution
     </a>
     <span> | </span>
@@ -49,7 +49,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/proyectojotazo/recipe-page
+$ git clone https://github.com/proyectojotazo/button-component
 
 # Install dependencies
 $ npm install
